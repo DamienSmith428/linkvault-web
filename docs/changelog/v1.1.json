@@ -2,11 +2,7 @@
   "date": "06/03/2026",
   "tag": "Bug Fix",
   "tagStyle": "patch",
-
-  "_githubReleaseUrl_note": "Link to the specific GitHub release for this version.",
-  "githubReleaseUrl": "https://github.com/DamienSmith428/LinkVault/releases/tag/v1.1",
-
-  "_changesNote": "Add as many change groups as you need. 'type' must be one of: 'added', 'fixed', 'removed'. Delete any groups you don't need.",
+  "githubReleaseUrl": "https://github.com/DamienSmith428/LinkVault/releases/tag/LinkVault-V1.1",
   "changes": [
     {
       "type": "fixed",
