@@ -740,7 +740,7 @@ async function loadPreviousVersions(cfg) {
   const rows = fetches.map((result, i) => {
     if (result.status === 'rejected') return '';
     const v = result.value;
-    const vTag = `v${v.version}`;
+    const vTag = `LinkVault-V${v.version}`;
     const tagClass = v.tagStyle || 'feature';
 
     const dlLinks = cfg.downloads.map(d => {
