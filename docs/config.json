@@ -65,25 +65,25 @@
       "arch": "arm64-v8a",
       "description": "Most Android phones 2016 and newer. If you're unsure, this is the one.",
       "recommended": true,
-      "filename": "app-arm64-v8a-release.apk"
+      "filename": "app-arm64-v8a-{version}-release.apk"
     },
     {
       "arch": "armeabi-v7a",
       "description": "Older or budget 32-bit Android devices.",
       "recommended": false,
-      "filename": "app-armeabi-v7a-release.apk"
+      "filename": "app-armeabi-v7a-{version}-release.apk"
     },
     {
       "arch": "x86_64",
       "description": "Android emulators and Intel-based Android devices (64-bit).",
       "recommended": false,
-      "filename": "app-x86_64-release.apk"
+      "filename": "app-x86_64-{version}-release.apk"
     },
     {
       "arch": "x86",
       "description": "Older 32-bit Android emulators and Intel devices.",
       "recommended": false,
-      "filename": "app-x86-release.apk"
+      "filename": "app-x86-{version}-release.apk"
     }
   ],
   "changelog": {
