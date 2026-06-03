@@ -4,7 +4,8 @@
     "tagline": "Own Your Media",
     "description": "Organize links. Download audio with full metadata and album art. Carry your entire library in your pocket. No subscriptions. No cloud. No nonsense.",
     "latestVersion": "1.1",
-    "eyebrow": "Android Media Manager"
+    "eyebrow": "Android Media Manager",
+    "icon": "https://raw.githubusercontent.com/DamienSmith428/LinkVault/master/app/src/main/res/drawable/app_icon_main.png"
   },
   "github": {
     "repo": "DamienSmith428/LinkVault",
