@@ -3,7 +3,7 @@
     "name": "LinkVault",
     "tagline": "Own Your Media",
     "description": "Organize links. Download audio with full metadata and album art. Carry your entire library in your pocket. No subscriptions. No cloud. No nonsense.",
-    "latestVersion": "1.0",
+    "latestVersion": "1.1",
     "eyebrow": "Android Media Manager"
   },
   "github": {
@@ -88,7 +88,8 @@
   ],
   "changelog": {
     "versions": [
-      "v1.0.json"
+      "v1.0.json",
+      "v1.1.json"
     ]
   }
 }
