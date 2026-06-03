@@ -96,16 +96,78 @@ footer a:hover { color: var(--cyan); }
 .footer-links { display: flex; gap: 28px; }
 .footer-links a { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
 
-@media (max-width: 600px) {
-  nav { padding: 16px 20px; }
-  .nav-links { gap: 20px; }
+/* ── RESPONSIVE ── */
+
+/* Tablet landscape (≤1024px) */
+@media (max-width: 1024px) {
+  nav { padding: 14px 28px; }
+  .page-wrap { padding: 120px 28px 80px; }
+  footer { padding: 32px 28px; }
+}
+
+/* Tablet portrait (≤768px) */
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: 10px; letter-spacing: 1px; }
+  .nav-links li:nth-child(3),
+  .nav-links li:nth-child(4) { display: none; }
+  .page-wrap { padding: 110px 20px 72px; }
+  /* Shrink timeline gutter */
+  .timeline::before { left: 90px; }
+  .release { grid-template-columns: 90px 1fr; }
+  .release-dot { left: 82px; }
+  .release-meta { padding-right: 24px; }
+  .release-body { padding-left: 32px; }
+  footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-links { flex-wrap: wrap; gap: 20px; }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  nav { padding: 12px 16px; }
+  .nav-links { display: none; }
+  .page-wrap { padding: 88px 16px 56px; }
+
+  .page-title { letter-spacing: 2px; margin-bottom: 48px; }
+
+  /* Collapse timeline — hide the vertical line and dot, stack meta above body */
   .timeline::before { display: none; }
-  .release { grid-template-columns: 1fr; }
+  .release {
+    grid-template-columns: 1fr;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+  .release:last-child { border-bottom: none; }
   .release-dot { display: none; }
-  .release-meta { text-align: left; padding-right: 0; margin-bottom: 16px; }
+  .release-meta {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .release-version { font-size: 20px; margin-bottom: 0; }
   .release-body { padding-left: 0; }
-  footer { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
+  .release-tag { margin-bottom: 20px; }
+
+  .change-group { margin-bottom: 20px; }
+  .change-group-label { font-size: 9px; letter-spacing: 2px; }
+  .change-list li { font-size: 11px; }
+
+  .release-link { font-size: 10px; }
+
+  footer { padding: 20px 16px; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .footer-links { flex-wrap: wrap; gap: 14px; }
+  .footer-links a { font-size: 10px; letter-spacing: 1px; }
+  footer p { font-size: 10px; }
+}
+
+/* Very small phones (≤360px) */
+@media (max-width: 360px) {
+  .release-version { font-size: 18px; }
+  .change-list li { font-size: 10px; }
 }
 </style>
 </head>

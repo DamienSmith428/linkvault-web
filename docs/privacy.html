@@ -342,12 +342,70 @@ footer a:hover { color: var(--cyan); }
 .footer-links { display: flex; gap: 28px; }
 .footer-links a { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
 
-@media (max-width: 600px) {
-  nav { padding: 16px 20px; }
-  .nav-links { gap: 20px; }
-  .honest-box { flex-direction: column; gap: 12px; }
-  footer { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
+/* ── RESPONSIVE ── */
+
+/* Tablet landscape (≤1024px) */
+@media (max-width: 1024px) {
+  nav { padding: 14px 28px; }
+  .page-wrap { padding: 120px 28px 80px; }
+  footer { padding: 32px 28px; }
+}
+
+/* Tablet portrait (≤768px) */
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: 10px; letter-spacing: 1px; }
+  /* Hide lower-priority nav items */
+  .nav-links li:nth-child(3),
+  .nav-links li:nth-child(4) { display: none; }
+  .page-wrap { padding: 110px 20px 72px; }
+  .honest-box { padding: 28px 24px; }
+  .permission-table th,
+  .permission-table td { padding: 12px 14px; }
+  footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-links { flex-wrap: wrap; gap: 20px; }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  nav { padding: 12px 16px; }
+  .nav-links { display: none; }
+  .page-wrap { padding: 88px 16px 60px; }
+
+  .page-title { letter-spacing: 2px; margin-bottom: 16px; }
+  .page-subtitle { font-size: 10px; letter-spacing: 1px; margin-bottom: 40px; }
+
+  /* Honest box — stack icon above text */
+  .honest-box { flex-direction: column; gap: 12px; padding: 22px 18px; margin-bottom: 44px; }
+  .honest-icon { font-size: 26px; }
+  .honest-box h2 { font-size: 15px; }
+  .honest-box p { font-size: 11px; }
+
+  /* Policy sections */
+  .policy-section { margin-bottom: 40px; padding-bottom: 40px; }
+  .policy-section h2 { font-size: 16px; gap: 10px; }
+  .policy-section p,
+  .policy-section ul li { font-size: 11px; }
+
+  /* Permission table — make it scrollable so it never clips */
+  .permission-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .permission-table { min-width: 360px; font-size: 11px; }
+  .permission-table th,
+  .permission-table td { padding: 10px 12px; }
+  .permission-table td:first-child { width: 110px; }
+
+  /* Footer */
+  footer { padding: 20px 16px; flex-direction: column; align-items: flex-start; gap: 12px; }
+  .footer-links { flex-wrap: wrap; gap: 14px; }
+  .footer-links a { font-size: 10px; letter-spacing: 1px; }
+  footer p { font-size: 10px; }
+}
+
+/* Very small phones (≤360px) */
+@media (max-width: 360px) {
+  .honest-box h2 { font-size: 14px; }
+  .policy-section h2 { font-size: 14px; }
 }
 </style>
 </head>
@@ -398,7 +456,7 @@ footer a:hover { color: var(--cyan); }
   <div class="policy-section">
     <h2>Permissions</h2>
     <p>LinkVault requests only the permissions it needs to function:</p>
-    <table class="permission-table">
+    <div class="permission-table-wrap"><table class="permission-table">
       <thead>
         <tr>
           <th>Permission</th>
@@ -419,7 +477,7 @@ footer a:hover { color: var(--cyan); }
           <td>Keeping downloads running while the app is in the background</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
     <p style="margin-top: 24px;">LinkVault does not request access to your contacts, location, microphone, camera, or any other sensitive device feature.</p>
   </div>
 
