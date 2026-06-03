@@ -1,0 +1,29 @@
+{
+  "version": "1.1",
+  "date": "06/03/2026",
+  "tag": "Bug Fix",
+  "tagStyle": "patch",
+  "githubReleaseUrl": "https://github.com/DamienSmith428/LinkVault/releases",
+  "changes": [
+    {
+      "type": "added",
+      "items": [
+        "Describe a new feature here",
+        "Another new feature"
+      ]
+    },
+    {
+      "type": "fixed",
+      "items": [
+        "Describe a bug fix here",
+        "Another bug fix"
+      ]
+    },
+    {
+      "type": "removed",
+      "items": [
+        "Something that was removed"
+      ]
+    }
+  ]
+}
