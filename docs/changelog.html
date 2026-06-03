@@ -147,16 +147,8 @@ footer a:hover { color: var(--cyan); }
 // ── HOW TO ADD A NEW CHANGELOG ──
 // 1. Duplicate changelog/_template.json → changelog/v1.1.json (or whatever the version is)
 // 2. Fill in version, date, tag, tagStyle, githubReleaseUrl, and changes
-// 3. Add the filename to the VERSIONS list below (newest first)
+// 3. Add the filename to changelog.versions in config.json (newest first)
 // That's it — the page will automatically render it.
-
-const VERSIONS = [
-  'v1.0.json',
-  'v1.1.json',
-  // Add new versions above this line, newest first:
-  // 'v1.1.json',
-  // 'v1.2.json',
-];
 
 function buildReleaseHTML(data, index) {
   const isNewest = index === 0;
@@ -192,6 +184,8 @@ async function loadChangelogs() {
   document.getElementById('nav-github').href = cfg.github.baseUrl;
   document.getElementById('footer-github-user').href = `https://github.com/${cfg.github.repo.split('/')[0]}`;
   document.getElementById('footer-github-link').href = cfg.github.baseUrl;
+
+  const VERSIONS = cfg.changelog?.versions ?? [];
 
   const timeline = document.getElementById('timeline');
   const results = await Promise.all(
