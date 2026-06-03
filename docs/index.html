@@ -216,23 +216,102 @@ footer a:hover { color: var(--cyan); }
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-@media (max-width: 900px) {
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+
+/* Tablet landscape (up to 1024px) */
+@media (max-width: 1024px) {
+  nav { padding: 14px 28px; }
+  .section, .more-section { padding: 80px 28px; }
+  .download-section { padding: 80px 28px; }
+  .stats-inner { padding: 0 28px; }
   .features-grid { grid-template-columns: repeat(2,1fr); }
   .apk-grid { grid-template-columns: repeat(2,1fr); }
-  .subpage-grid { grid-template-columns: 1fr; }
+  .subpage-grid { grid-template-columns: repeat(2,1fr); }
   .stats-inner { grid-template-columns: repeat(2,1fr); }
   .stat { border-bottom: 1px solid var(--border); }
+  footer { padding: 32px 28px; }
 }
-@media (max-width: 600px) {
-  nav { padding: 16px 20px; }
+
+/* Tablet portrait (up to 768px) */
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-left { gap: 12px; }
+  .nav-store-back { font-size: 9px; padding: 4px 10px; letter-spacing: 1px; }
   .nav-links { gap: 20px; }
   .nav-links a { font-size: 10px; letter-spacing: 1px; }
-  .hero-buttons { flex-direction: column; align-items: center; }
-  .features-grid { grid-template-columns: 1fr; }
-  .apk-grid { grid-template-columns: 1fr; }
-  .stats-inner { grid-template-columns: 1fr; }
-  footer { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
+  .hero { padding: 100px 20px 60px; }
+  .hero-sub { font-size: 13px; }
+  .hero-buttons { gap: 12px; }
+  .btn-primary, .btn-secondary { padding: 14px 24px; font-size: 12px; }
+  .section, .more-section { padding: 72px 20px; }
+  .download-section { padding: 72px 20px; }
+  .features-grid { grid-template-columns: repeat(2,1fr); }
+  .feature-card { padding: 32px 24px; }
+  .apk-grid { grid-template-columns: repeat(2,1fr); }
+  .subpage-grid { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); padding: 0 20px; }
+  footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-links { justify-content: flex-start; flex-wrap: wrap; gap: 20px; }
+  .footer-meta { text-align: left; }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  /* Nav — collapse links, keep logo + back button */
+  nav { padding: 12px 16px; }
+  .nav-links { display: none; }
+  .nav-left { gap: 10px; }
+  .nav-store-back { font-size: 9px; padding: 4px 9px; }
+
+  /* Hero */
+  .hero { padding: 90px 16px 48px; min-height: auto; }
+  .hero-eyebrow { font-size: 10px; letter-spacing: 4px; }
+  .hero-sub { font-size: 12px; line-height: 1.9; margin: 24px auto 36px; }
+  .hero-buttons { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; }
+  .btn-primary, .btn-secondary { justify-content: center; padding: 15px 20px; font-size: 12px; }
+  .hero-scroll { margin-top: 48px; }
+
+  /* Stats bar */
+  .stats-inner { grid-template-columns: repeat(2,1fr); padding: 0 16px; }
+  .stat { padding: 24px 16px; border-bottom: 1px solid var(--border); }
+  .stat:nth-child(odd) { border-right: 1px solid var(--border); }
+  .stat:nth-child(even) { border-right: none; }
+  .stat-num { font-size: 36px; }
+
+  /* Sections */
+  .section, .more-section { padding: 56px 16px; }
+  .download-section { padding: 56px 16px; }
+  .section-title { font-size: clamp(36px, 10vw, 56px); }
+
+  /* Features */
+  .features-grid { grid-template-columns: 1fr; margin-top: 40px; }
+  .feature-card { padding: 28px 20px; }
+  .feature-num { font-size: 44px; }
+
+  /* APK download cards */
+  .apk-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 36px; }
+  .apk-card { padding: 24px 20px; }
+  .apk-arch { font-size: 22px; }
+  /* Prevent iOS zoom on any inputs */
+  input, select, textarea { font-size: 16px !important; }
+
+  /* More section / subpage cards */
+  .subpage-grid { grid-template-columns: 1fr; margin-top: 40px; gap: 10px; }
+  .subpage-card { padding: 28px 20px; }
+
+  /* Footer */
+  footer { padding: 24px 16px; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-links { flex-wrap: wrap; gap: 16px; justify-content: flex-start; }
+  .footer-links a { font-size: 10px; }
+  footer p { font-size: 10px; }
+}
+
+/* Very small phones (up to 360px) */
+@media (max-width: 360px) {
+  .hero-eyebrow { letter-spacing: 2px; }
+  .btn-primary, .btn-secondary { font-size: 11px; letter-spacing: 1px; padding: 13px 16px; }
+  .stat-num { font-size: 30px; }
+  .apk-arch { font-size: 20px; }
 }
 
 /* SideStack back link */
