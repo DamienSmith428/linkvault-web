@@ -8,7 +8,7 @@
       "type": "fixed",
       "items": [
         "Refactored code to improve performance",
-        "Fixed Youtube-dl's auto update feature to work correctly",
+        "Fixed Youtube-dl's auto update feature to work correctly"
       ]
     }
   ]
