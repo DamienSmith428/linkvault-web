@@ -1,0 +1,77 @@
+{
+  "app": {
+    "name": "LinkVault",
+    "tagline": "Own Your Media",
+    "description": "Organize links. Download audio with full metadata and album art. Carry your entire library in your pocket. No subscriptions. No cloud. No nonsense.",
+    "latestVersion": "1.0",
+    "eyebrow": "Android Media Manager"
+  },
+  "github": {
+    "repo": "DamienSmith428/LinkVault",
+    "baseUrl": "https://github.com/DamienSmith428/LinkVault"
+  },
+  "stats": [
+    { "value": "4",   "label": "APK Builds" },
+    { "value": "0",   "label": "Data Collected" },
+    { "value": "6",   "label": "Core Features" },
+    { "value": "MIT", "label": "License" }
+  ],
+  "features": [
+    {
+      "icon": "📁",
+      "title": "Folder Organization",
+      "description": "Build your library your way. Custom folders, your structure. No algorithm deciding what you see."
+    },
+    {
+      "icon": "⬇️",
+      "title": "Built-in Downloader",
+      "description": "yt-dlp powered with a full queue system. Line up downloads and let them run in the background."
+    },
+    {
+      "icon": "🎵",
+      "title": "Proper MP3 Metadata",
+      "description": "Thumbnail scraped and embedded as album art. Artist and title embedded as ID3 tags. Every player shows it correctly."
+    },
+    {
+      "icon": "📦",
+      "title": "Import / Export",
+      "description": "Export any folder as a ZIP and share it. Anyone with LinkVault can import your full collection instantly."
+    },
+    {
+      "icon": "🔍",
+      "title": "Cross-Folder Search",
+      "description": "Search by artist or song name from the main screen. Find anything across all folders instantly."
+    },
+    {
+      "icon": "🔒",
+      "title": "Fully Private",
+      "description": "No account. No analytics. No telemetry. Everything stays on your device. Always."
+    }
+  ],
+  "downloads": [
+    {
+      "arch": "arm64-v8a",
+      "description": "Most Android phones 2016 and newer. If you're unsure, this is the one.",
+      "recommended": true,
+      "releaseTag": "LinkVault-arm64-v8a"
+    },
+    {
+      "arch": "armeabi-v7a",
+      "description": "Older or budget 32-bit Android devices.",
+      "recommended": false,
+      "releaseTag": "LinkVault-armeabi-v7a"
+    },
+    {
+      "arch": "x86_64",
+      "description": "Android emulators and Intel-based Android devices (64-bit).",
+      "recommended": false,
+      "releaseTag": "LinkVault-x86_64"
+    },
+    {
+      "arch": "x86",
+      "description": "Older 32-bit Android emulators and Intel devices.",
+      "recommended": false,
+      "releaseTag": "LinkVault-x86"
+    }
+  ]
+}

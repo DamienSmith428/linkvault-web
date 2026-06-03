@@ -363,7 +363,7 @@ footer a:hover { color: var(--cyan); }
     <li><a href="index.html#download">Download</a></li>
     <li><a href="changelog.html">Changelog</a></li>
     <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="https://github.com/DamienSmith428/LinkVault" target="_blank">GitHub ↗</a></li>
+    <li><a href="https://github.com/DamienSmith428/LinkVault" id="nav-github" target="_blank">GitHub ↗</a></li>
   </ul>
 </nav>
 
@@ -448,11 +448,11 @@ footer a:hover { color: var(--cyan); }
 
 <footer>
   <span class="footer-logo">LinkVault</span>
-  <p>Built by <a href="https://github.com/DamienSmith428" target="_blank">DamienSmith428</a>. Open source under MIT.</p>
+  <p>Built by <a href="https://github.com/DamienSmith428" id="footer-github-user" target="_blank">DamienSmith428</a>. Open source under MIT.</p>
   <div class="footer-links">
     <a href="privacy.html">Privacy</a>
     <a href="changelog.html">Changelog</a>
-    <a href="https://github.com/DamienSmith428/LinkVault" target="_blank">GitHub</a>
+    <a href="https://github.com/DamienSmith428/LinkVault" id="footer-github-link" target="_blank">GitHub</a>
   </div>
 </footer>
 
@@ -466,6 +466,20 @@ const obs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 sections.forEach(s => obs.observe(s));
+</script>
+
+<script>
+// Load GitHub links from config
+fetch('config.json').then(r => r.json()).then(cfg => {
+  const gh = cfg.github.baseUrl;
+  const user = `https://github.com/${cfg.github.repo.split('/')[0]}`;
+  document.getElementById('nav-github').href = gh;
+  document.getElementById('footer-github-user').href = user;
+  document.getElementById('footer-github-link').href = gh;
+  // Issues link in the policy body
+  const issuesLinks = document.querySelectorAll('a[href*="DamienSmith428/LinkVault/issues"]');
+  issuesLinks.forEach(a => a.href = `${gh}/issues`);
+});
 </script>
 </body>
 </html>
