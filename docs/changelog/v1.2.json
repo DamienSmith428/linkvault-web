@@ -1,0 +1,15 @@
+{ "version": "1.2",
+  "date": "06/03/2026",
+  "tag": "Feature Addition",
+  "tagStyle": "feature",
+  "githubReleaseUrl": "https://github.com/DamienSmith428/LinkVault/releases/tag/LinkVault-V1.1",
+  "changes": [
+    {
+      "type": "added",
+      "items": [
+        "Added a built in update checker that checks for updates on startup and notifies the user if an update is available",
+        "Cleaned up the mess left by this addition"
+      ]
+    }
+  ]
+}
