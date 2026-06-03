@@ -382,7 +382,7 @@ async function loadConfig() {
   // APK cards
   const apkEl = document.getElementById('apk-grid');
   apkEl.innerHTML = cfg.downloads.map(d => `
-    <a href="${gh}/releases/tag/${d.releaseTag}" class="apk-card${d.recommended ? ' recommended' : ''}" target="_blank">
+    <a href="${gh}/releases/latest/download/${d.filename}" class="apk-card${d.recommended ? ' recommended' : ''}" target="_blank">
       ${d.recommended ? '<span class="apk-badge">Recommended</span>' : ''}
       <span class="apk-arch">${d.arch}</span>
       <p class="apk-desc">${d.description}</p>
