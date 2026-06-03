@@ -1,0 +1,15 @@
+{ "version": "1.1",
+  "date": "06/03/2026",
+  "tag": "Bug Fix",
+  "tagStyle": "patch",
+  "githubReleaseUrl": "https://github.com/DamienSmith428/LinkVault/releases/tag/LinkVault-V1.1",
+  "changes": [
+    {
+      "type": "fixed",
+      "items": [
+        "Refactored code to improve performance",
+        "Fixed Youtube-dl's auto update feature to work correctly"
+      ]
+    }
+  ]
+}

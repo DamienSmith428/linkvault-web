@@ -508,121 +508,6 @@ footer a:hover { color: var(--cyan); }
 }
 .prev-dl-link .dl-arrow { font-size: 13px; }
 
-/* ── ISSUES SECTION ── */
-.issues-section {
-  padding: 120px 24px;
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
-}
-.issues-section::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--magenta), var(--cyan), transparent);
-}
-.issues-inner { max-width: 1100px; margin: 0 auto; }
-.issues-hint {
-  margin-top: -16px;
-  margin-bottom: 0;
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.8;
-  max-width: 600px;
-}
-.issues-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-top: 56px;
-}
-.issue-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 36px 32px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s;
-}
-.issue-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--glow-magenta), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.issue-card::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--magenta), var(--cyan));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-.issue-card:hover {
-  border-color: rgba(255,0,200,0.35);
-  transform: translateY(-5px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px rgba(255,0,200,0.08);
-}
-.issue-card:hover::before { opacity: 1; }
-.issue-card:hover::after { transform: scaleX(1); }
-.issue-icon {
-  font-size: 36px;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-}
-.issue-body { flex: 1; position: relative; z-index: 1; }
-.issue-body h3 {
-  font-family: 'Oxanium', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
-.issue-body p {
-  font-size: 12px;
-  color: var(--muted);
-  line-height: 1.9;
-}
-.issue-arrow {
-  color: var(--magenta);
-  font-size: 22px;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s;
-  text-shadow: 0 0 12px rgba(255,0,200,0.5);
-}
-.issue-card:hover .issue-arrow { transform: translateX(5px); }
-
-@media (max-width: 1024px) {
-  .issues-section { padding: 80px 28px; }
-}
-@media (max-width: 768px) {
-  .issues-section { padding: 72px 20px; }
-  .issues-grid { grid-template-columns: 1fr; margin-top: 40px; }
-}
-@media (max-width: 480px) {
-  .issues-section { padding: 56px 16px; }
-  .issue-card { padding: 24px 18px; gap: 18px; }
-  .issue-icon { font-size: 28px; }
-  .issue-body h3 { font-size: 17px; }
-  .issue-body p { font-size: 11px; }
-}
-
 /* SideStack back link */
 .nav-left { display: flex; align-items: center; gap: 20px; }
 .nav-store-back { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); text-decoration: none; border: 1px solid var(--border); border-radius: 3px; padding: 5px 12px; transition: color 0.2s, border-color 0.2s, box-shadow 0.2s; white-space: nowrap; }
@@ -646,7 +531,6 @@ footer a:hover { color: var(--cyan); }
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#download">Download</a></li>
-    <li><a href="#feedback">Feedback</a></li>
     <li><a href="changelog.html">Changelog</a></li>
     <li><a href="privacy.html">Privacy</a></li>
     <li><a href="#" id="nav-github" target="_blank">GitHub ↗</a></li>
@@ -730,37 +614,10 @@ footer a:hover { color: var(--cyan); }
       </a>
       <a href="#" id="issues-link" class="subpage-card" target="_blank">
         <div class="subpage-num">03</div>
-        <h3>GitHub</h3>
-        <p>Browse the source code, star the repo, or fork it and make it your own.</p>
-        <span class="subpage-link">View on GitHub →</span>
+        <h3>Report a Bug</h3>
+        <p>Found something broken? Open an issue on GitHub and it will get looked at.</p>
+        <span class="subpage-link">Open an issue →</span>
       </a>
-    </div>
-  </section>
-
-  <!-- ISSUES -->
-  <section class="issues-section" id="feedback">
-    <div class="issues-inner">
-      <p class="section-label">Feedback</p>
-      <h2 class="section-title">Report a Bug or<br><span class="accent">Request a Feature.</span></h2>
-      <p class="issues-hint">Not sure how to use GitHub? No problem — just pick a category below, fill in the form, and hit Submit. It takes less than a minute.</p>
-      <div class="issues-grid reveal">
-        <a href="https://github.com/DamienSmith428/LinkVault/issues/new?template=bug_report.md" class="issue-card" target="_blank">
-          <div class="issue-icon">🐛</div>
-          <div class="issue-body">
-            <h3>Bug Report</h3>
-            <p>Something isn't working the way it should? Let me know what happened and I'll get it fixed.</p>
-          </div>
-          <span class="issue-arrow">→</span>
-        </a>
-        <a href="https://github.com/DamienSmith428/LinkVault/issues/new?template=feature_request.md" class="issue-card" target="_blank">
-          <div class="issue-icon">💡</div>
-          <div class="issue-body">
-            <h3>Feature Request</h3>
-            <p>Have an idea that would make LinkVault better? Submit it and it'll be considered for a future release.</p>
-          </div>
-          <span class="issue-arrow">→</span>
-        </a>
-      </div>
     </div>
   </section>
 
@@ -798,7 +655,7 @@ async function loadConfig() {
   document.getElementById('hero-github-btn').href = gh;
   document.getElementById('footer-github-user').href = `https://github.com/${cfg.github.repo.split('/')[0]}`;
   document.getElementById('footer-github-link').href = gh;
-  document.getElementById('issues-link').href = gh;
+  document.getElementById('issues-link').href = `${gh}/issues`;
 
   // Stats
   const statsEl = document.getElementById('stats-inner');
