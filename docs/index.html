@@ -740,11 +740,12 @@ async function loadPreviousVersions(cfg) {
   const rows = fetches.map((result, i) => {
     if (result.status === 'rejected') return '';
     const v = result.value;
-    const vTag = `LinkVault-V${v.version}`;
+    const vTag = `LinkVault-V${v.version}`;   // used for the GitHub release tag in the URL
+    const vFile = `v${v.version}`;             // used for the APK filename
     const tagClass = v.tagStyle || 'feature';
 
     const dlLinks = cfg.downloads.map(d => {
-      const filename = d.filename.replace('{version}', vTag);
+      const filename = d.filename.replace('{version}', vFile);
       const url = `${gh}/releases/download/${vTag}/${filename}`;
       return `<a href="${url}" class="prev-dl-link" target="_blank"><span class="dl-arrow">↓</span>${d.arch}</a>`;
     }).join('');
